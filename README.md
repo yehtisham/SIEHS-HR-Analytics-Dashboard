@@ -3,131 +3,95 @@ HR Data Analysis and Workforce Performance Insights (SIEHS)
 Author: Muhammad Yahya
 
 Confidentiality Notice:
-
-This repository contains no sensitive company information.
-
+This repository contains no sensitive company information. All data used is authorized, sanitized, and safe 
 Overview
 
-This project analyzes attendance, punctuality, shift compliance, and workforce efficiency for Sindh Integrated Emergency & Health Services (SIEHS) using HR timestamp data from ~1,800 employees. The goal was to transform fragmented Excel sheets into a unified, analytics-ready master dataset and build an interactive Power BI dashboard enabling managers to monitor operational performance and identify workforce patterns.
+This project processes and analyzes attendance and HR operations data for Sindh Integrated Emergency & Health Services (SIEHS). The goal was to clean fragmented Excel files, standardize time and attendance records, and build a unified dataset for performance monitoring through a Power BI dashboard.
 
 This repository includes:
 
-A professionally written Analysis Report (PDF)
+Final Analysis Report (PDF)
 
-Clean R code used for data ingestion, cleaning, transformation, and metric computation
+Clean R code for data processing
 
-The master dataset generation pipeline
+Master dataset creation pipeline
 
-A high-level view of the analytics dashboard (image only — not the PBIX file)
-
-All data used is authorized for portfolio use and contains no confidential values.
+Dashboard image (PBIX not included)
 
 Objectives
 
-Integrate five independent HR data sources (attendance, invalid entries, leaves, absent sheets, pending leaves).
+Consolidate five HR data sources
 
-Correct and convert Excel date/time formats into meaningful metrics.
+Correct and standardize date/time formats
 
-Detect and clean invalid, missing, or duplicated time entries.
+Remove invalid or inconsistent entries
 
-Compute workforce KPIs, including:
+Compute key workforce metrics:
 
-Attended days
-
-Absences
-
-Approved vs. unapproved leaves
+Attendance & absences
 
 Working hours
 
 Late arrivals
 
-Invalid punch-ins
+Approved / unapproved leaves
 
-Build a unified master dataset for analytics.
+Invalid entries
 
-Generate visual insights for senior management.
+Build a single analytics-ready master dataset
 
-Data Sources (Raw Inputs)
+Generate insights for HR and operations teams
 
-Methodology Summary
-1. Data Cleaning & Standardization
+Method Summary
 
-Key processing steps:
+Data Cleaning
 
-Normalized column names with janitor::clean_names()
+Column normalization
 
-Removed duplicated or blank rows
+Date/time conversion
 
-Converted Excel decimal dates using custom functions
+Removal of duplicates and invalid rows
 
-Reconstructed time-in / time-out pairs
+Reconstruction of Time-In/Time-Out
 
-Standardized department and position labels
+Attendance Processing
 
-Handled multi-format leave types (annual, casual, sick, compensatory, etc.)
+Reshaped daily attendance using pivot_longer()
 
-2. Attendance Transformation
+Computed working hours, absences, holidays, and invalid timestamps
 
-The attendance sheet was reshaped using pivot_longer() into a long format to:
+KPI Engineering
 
-Compute daily working hours
+Total assigned duties
 
-Detect invalid entries
+Attended vs. absent days
 
-Flag absences, off-days, and holidays
+Working hours
 
-Aggregate totals per employee
+Leave categories
 
-3. KPI Engineering
+Invalid entry counts
 
-Metrics computed:
+Schedule status
 
-Total Assigned Duties
-
-Total Attended Days
-
-Total Absences
-
-Working Hours
-
-Invalid Entries
-
-Approved / Unapproved Leaves
-
-Off Days & Holidays
-
-Schedule Status
-
-Leave Type Breakdown
-
-4. Master Dataset Construction
-
-All datasets were merged on Emp Index, producing a consolidated table with one row per employee, covering onboarding data, attendance, behavior, and leave patterns.
-
-The final dataset powers the Power BI dashboard.
+Master Dataset
+Merged all sources using Emp Index, producing a unified employee-level dataset used for dashboarding.
 
 Dashboard Insights
 
-The Power BI dashboard highlights:
-
 On-time arrival trends
 
-Shift-level attendance compliance
+Department-level punctuality
 
-Department-level punctuality performance
+Late arrival patterns
 
-Late arrivals heatmaps
+Shift compliance
 
 Employee-level summaries
 
-Workforce efficiency indicators
-
-A static dashboard image is included for reference.
+A static dashboard preview is included.
 
 Contact
-
-For questions or verification:
 
 Muhammad Yahya
 Email: yahyaehtisham2004@gmail.com
