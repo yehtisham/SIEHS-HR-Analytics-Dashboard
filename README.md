@@ -1,97 +1,82 @@
-HR Data Analysis and Workforce Performance Insights (SIEHS)
+# HR Data Analysis and Workforce Performance Insights (SIEHS)
+**Author:** Muhammad Yahya  
 
-Author: Muhammad Yahya
+---
 
-Confidentiality Notice:
-This repository contains no sensitive company information. All data used is authorized, sanitized, and safe 
-Overview
+## Confidentiality Notice
+This repository contains no sensitive company data. All files are sanitized, authorized for portfolio use, and safe for public release.
 
-This project processes and analyzes attendance and HR operations data for Sindh Integrated Emergency & Health Services (SIEHS). The goal was to clean fragmented Excel files, standardize time and attendance records, and build a unified dataset for performance monitoring through a Power BI dashboard.
+---
 
-This repository includes:
+## Overview
+This project analyzes workforce attendance and punctuality for **Sindh Integrated Emergency & Health Services (SIEHS)**.  
+Multiple HR files were cleaned, standardized, and merged to create a unified dataset powering a Power BI workforce monitoring dashboard.
 
-Final Analysis Report (PDF)
+### Included in this repository
+- Analysis Report (PDF)  
+- R data-processing script  
+- Master dataset generation pipeline  
+- Dashboard preview image (PBIX not included)
 
-Clean R code for data processing
+---
 
-Master dataset creation pipeline
+## Objectives
+- Integrate and harmonize five separate HR datasets  
+- Convert Excel date/time formats into usable values  
+- Clean invalid or inconsistent punch entries  
+- Engineer KPIs such as:
+  - Attendance and absences  
+  - Working hours  
+  - Late arrivals  
+  - Leave breakdown  
+  - Invalid entry counts  
+- Build a unified master dataset  
+- Produce workforce insights through analytics
 
-Dashboard image (PBIX not included)
+---
 
-Objectives
+## Method Summary
 
-Consolidate five HR data sources
+### 1. Data Cleaning & Standardization
+- Normalized column names  
+- Removed blank/duplicate entries  
+- Converted Excel decimal dates & times  
+- Standardized leave categories  
+- Reconstructed Time In / Time Out pairs  
 
-Correct and standardize date/time formats
+### 2. Attendance Transformation
+- Reshaped daily attendance into long format  
+- Computed daily and total working hours  
+- Tagged invalid entries and absences  
+- Identified off-days & holidays  
 
-Remove invalid or inconsistent entries
+### 3. KPI Engineering
+Metrics generated:
+- Attended Days  
+- Absent Days  
+- Total Working Hours  
+- Invalid Entries  
+- Approved / Unapproved Leaves  
+- Off Days & Holidays  
+- Schedule status  
 
-Compute key workforce metrics:
+### 4. Master Dataset Construction
+All cleaned datasets were merged using **Emp Index**, producing an analytics-ready employee-level dataset.
 
-Attendance & absences
+---
 
-Working hours
+## Dashboard Insights
+The dashboard provides:
+- Attendance & punctuality trends  
+- Department-level performance  
+- Shift compliance analysis  
+- Employee-level summaries  
+- Workforce efficiency indicators  
 
-Late arrivals
+*A static dashboard preview is included.*
 
-Approved / unapproved leaves
+---
 
-Invalid entries
-
-Build a single analytics-ready master dataset
-
-Generate insights for HR and operations teams
-
-Method Summary
-
-Data Cleaning
-
-Column normalization
-
-Date/time conversion
-
-Removal of duplicates and invalid rows
-
-Reconstruction of Time-In/Time-Out
-
-Attendance Processing
-
-Reshaped daily attendance using pivot_longer()
-
-Computed working hours, absences, holidays, and invalid timestamps
-
-KPI Engineering
-
-Total assigned duties
-
-Attended vs. absent days
-
-Working hours
-
-Leave categories
-
-Invalid entry counts
-
-Schedule status
-
-Master Dataset
-Merged all sources using Emp Index, producing a unified employee-level dataset used for dashboarding.
-
-Dashboard Insights
-
-On-time arrival trends
-
-Department-level punctuality
-
-Late arrival patterns
-
-Shift compliance
-
-Employee-level summaries
-
-A static dashboard preview is included.
-
-Contact
-
-Muhammad Yahya
+## Contact
+**Muhammad Yahya**  
 Email: yahyaehtisham2004@gmail.com
